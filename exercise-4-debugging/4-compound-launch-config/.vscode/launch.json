@@ -10,17 +10,21 @@
         }
     ],
     "configurations": [
-    {
+        {
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
             "name": "Launch Server",
             "program": "${workspaceFolder}/server/server.js",
-            "env": {
-                "API_BASE": "https://lifx-lamp-api.azurwebsites.net/api"
-            },
             "request": "launch",
+            "restart": true,
+            "runtimeExecutable": "nodemon",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "type": "pwa-node"
+            "type": "pwa-node",
+            "env": {
+                "API_BASE": "https://lifx-lamp-api.azurwebsites.net/api"
+            },
         },
         {
             "type": "chrome",
